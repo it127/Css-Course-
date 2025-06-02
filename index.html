@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Course - Web Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-switch-wrapper">
+        <span id="toggle-icon">
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section for CSS Course -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">CSS Course</h1>
+            <p class="hero-subtitle">Learn to style and layout your web pages with CSS.</p>
+            <button class="cta-button" onclick="window.location.href='index.html'">Back to Home</button>
+        </div>
+        <div class="hero-image">
+            <img src="IMG-20250602-WA0009.jpg" alt="CSS Coding Illustration" class="floating">
+        </div>
+    </section>
+
+    <!-- Course Content Section -->
+    <section id="course-content" class="section">
+        <h2 class="section-title">Course Overview</h2>
+        <p class="course-description">
+            This CSS course is designed to help you master the art of styling and layout in web development. You'll learn the essentials of CSS, including selectors, properties, and layout techniques. By the end of this course, you'll be able to create visually appealing and responsive web pages.
+        </p>
+
+        <!-- Basics Section -->
+        <section class="section">
+            <h2 class="section-title">CSS Basics</h2>
+            <div class="content">
+                <h3>1. Introduction to CSS</h3>
+                <p>CSS stands for Cascading Style Sheets. It is used to style and layout HTML documents. CSS can control the layout, colors, fonts, and other visual aspects of a web page.</p>
+
+                <h3>2. CSS Syntax</h3>
+                <p>CSS syntax consists of a selector and a declaration block. The selector points to the HTML element you want to style, and the declaration block contains one or more declarations separated by semicolons.</p>
+                <pre><code>selector {
+    property: value;
+}</code></pre>
+
+                <h3>3. CSS Selectors</h3>
+                <p>CSS selectors are used to select the HTML elements you want to style. Common selectors include element selectors, class selectors, and ID selectors.</p>
+                <pre><code>/* Element Selector */
+p {
+    color: red;
+}
+
+/* Class Selector */
+.red-text {
+    color: red;
+}
+
+/* ID Selector */
+#main-header {
+    color: blue;
+}</code></pre>
+
+                <h3>4. CSS Properties</h3>
+                <p>CSS properties are used to set the styles for HTML elements. Some common properties include <code>color</code>, <code>background-color</code>, <code>font-size</code>, and <code>margin</code>.</p>
+                <pre><code>p {
+    color: red;
+    background-color: yellow;
+    font-size: 16px;
+    margin: 10px;
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Advanced Topics Section -->
+        <section class="section">
+            <h2 class="section-title">Advanced CSS Topics</h2>
+            <div class="content">
+                <h3>1. CSS Layout</h3>
+                <p>CSS provides several layout techniques, including flexbox and grid, to create responsive and flexible layouts.</p>
+                <pre><code>/* Flexbox Example */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid Example */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}</code></pre>
+
+                <h3>2. CSS Animations and Transitions</h3>
+                <p>CSS animations and transitions can be used to add dynamic effects to your web pages. Transitions are used for simple effects, while animations are used for more complex effects.</p>
+                <pre><code>/* Transition Example */
+button {
+    background-color: #4a6bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6c5ce7;
+}
+
+/* Animation Example */
+@keyframes slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.content {
+    animation: slide-in 1s;
+}</code></pre>
+
+                <h3>3. CSS Variables (Custom Properties)</h3>
+                <p>CSS variables (custom properties) allow you to define reusable values that can be used throughout your stylesheet.</p>
+                <pre><code>:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #6c5ce7;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}</code></pre>
+
+                <h3>4. CSS Grid</h3>
+                <p>CSS Grid is a two-dimensional layout system that allows you to create complex layouts with rows and columns.</p>
+                <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #4a6bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}</code></pre>
+
+                <h3>5. CSS Flexbox</h3>
+                <p>CSS Flexbox is a one-dimensional layout system that makes it easy to align and distribute space among items in a container.</p>
+                <pre><code>.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flex-item {
+    background-color: #4a6bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 150px;
+}</code></pre>
+
+                <h3>6. CSS Pseudo-classes and Pseudo-elements</h3>
+                <p>CSS pseudo-classes and pseudo-elements are used to style elements based on their state or position in the document.</p>
+                <pre><code>/* Pseudo-class Example */
+a:hover {
+    color: #4a6bff;
+}
+
+/* Pseudo-element Example */
+p::first-letter {
+    font-size: 24px;
+    font-weight: bold;
+}</code></pre>
+
+                <h3>7. CSS Media Queries</h3>
+                <p>CSS media queries are used to apply different styles for different media types or device characteristics. They are essential for creating responsive designs.</p>
+                <pre><code>@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+
+                <h3>8. CSS Units</h3>
+                <p>CSS units are used to specify the size of elements. Common units include pixels (px), em, rem, and percentages (%).</p>
+                <pre><code>.element {
+    width: 200px; /* Fixed width */
+    font-size: 16px; /* Fixed font size */
+    padding: 1em; /* Relative to the font size of the element */
+    margin: 5%; /* Relative to the width of the parent element */
+}</code></pre>
+
+                <h3>9. CSS Box Model</h3>
+                <p>The CSS box model is a box that wraps around every HTML element. It consists of margins, borders, padding, and the actual content. Understanding the box model is crucial for layout and spacing.</p>
+                <pre><code>.box {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 15px;
+}</code></pre>
+
+                <h3>10. CSS Specificity</h3>
+                <p>CSS specificity determines which CSS rule is applied by the browser when multiple rules apply to the same element. Specificity is calculated based on the number of ID, class, and element selectors.</p>
+                <pre><code>#id .class element {
+    color: red;
+}</code></pre>
+
+                <h3>11. CSS Inheritance</h3>
+                <p>CSS inheritance is the process by which certain CSS properties are passed down from parent elements to their child elements. Properties like <code>color</code> and <code>font-size</code> are inherited by default.</p>
+                <pre><code>.parent {
+    color: blue;
+    font-size: 16px;
+}
+
+.child {
+    /* Inherits color and font-size from .parent */
+}</code></pre>
+
+                <h3>12. CSS Preprocessors</h3>
+                <p>CSS preprocessors like SASS and LESS allow you to use features that are not available in standard CSS, such as variables, nesting, and mixins. They compile into standard CSS.</p>
+                <pre><code>$primary-color: #4a6bff;
+
+.container {
+    background-color: $primary-color;
+    padding: 20px;
+
+    .item {
+        color: white;
+        padding: 10px;
+    }
+}</code></pre>
+
+                <h3>13. CSS Grid and Flexbox for Responsive Design</h3>
+                <p>Combining CSS Grid and Flexbox can help you create highly responsive and flexible layouts. Grid is great for two-dimensional layouts, while Flexbox is ideal for one-dimensional layouts.</p>
+                <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #4a6bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Practical Examples Section -->
+        <section class="section">
+            <h2 class="section-title">Practical Examples</h2>
+            <div class="content">
+                <h3>1. Styling a Simple Web Page</h3>
+                <p>Here's a simple web page styled with CSS:</p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Styled Web Page&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        a {
+            color: #4a6bff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #6c5ce7;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Welcome to My Styled Web Page&lt;/h1&gt;
+        &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+        &lt;a href="https://example.com"&gt;Visit Example.com&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <h3>2. Creating a Responsive Layout with Flexbox</h3>
+                <p>Here's an example of a responsive layout using CSS Flexbox:</p>
+                <pre><code>&lt;style&gt;
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .flex-item {
+        background-color: #4a6bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        flex: 1 1 150px;
+    }
+
+    @media (max-width: 768px) {
+        .flex-container {
+            flex-direction: column;
+        }
+    }
+&lt;/style&gt;
+&lt;div class="flex-container"&gt;
+    &lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3>3. Creating a Grid Layout</h3>
+                <p>Here's an example of a grid layout using CSS Grid:</p>
+                <pre><code>&lt;style&gt;
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .grid-item {
+        background-color: #4a6bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+&lt;/style&gt;
+&lt;div class="grid-container"&gt;
+    &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="grid-item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="grid-item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="grid-item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="grid-item"&gt;Item 6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CodeMaster. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/it127" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
